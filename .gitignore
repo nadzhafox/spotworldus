@@ -1,0 +1,7 @@
+uploads
+data
+volumes
+.env
+snapshot.yaml
+spotworldus-postgis-backup.sql.gz
+spotworldus-postgis-backup.sql

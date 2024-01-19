@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+</head>
+
+<body>
+    <h1>Login Page</h1>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <button onclick="login()">login</button>
+    <button onclick="signUp()">signUp</button>
+
+    <script>
+        const PUBLIC_APIURL = 'http://localhost:8055'
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const data = {
+                email: email,
+                password: password
+            };
+
+            fetch(`${PUBLIC_APIURL}/auth/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Login response:', data);
+                })
+                .catch(error => {
+                    console.error('Login error:', error);
+                });
+        }
+
+        async function signUp() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const data = {
+                email: email,
+                password: password
+            };
+
+            fetch(`${PUBLIC_APIURL}/users`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('SignUp response:', data);
+                })
+                .catch(error => {
+                    console.error('SignUp error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
