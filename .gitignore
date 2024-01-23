@@ -2,5 +2,4 @@ uploads
 data
 volumes
 .env
-snapshot.yaml
 spotworldus-postgres.dump
