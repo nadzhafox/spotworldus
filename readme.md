@@ -28,5 +28,5 @@ Run `pnpm backup`.
 
 **!!! This comand delete all current project data. Be sure to create new backup if needed !!!**
 
-Place snapshot.yaml and spotworldus-postgres.dump in root folder. Sure prev containers deleted.
+Place spotworldus-postgres.dump in root folder. Sure prev containers deleted.
 Run `pnpm restore`.
