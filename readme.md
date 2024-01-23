@@ -11,7 +11,7 @@ Spotworld MVP bootstraped with [Directus](https://docs.directus.io/)
 ## Installation
 
 1. Run `pnpm init` to initialize your project.
-2. todo
+2. [Restore](#restore) if needed
 
 ## Configuration
 
@@ -19,5 +19,14 @@ All configuration settings are stored in a [`.env`](./.env) file. Please refer t
 
 ## Usage
 
-<!-- todo -->
-Examples and instructions on how to use your project.
+### Backup
+
+Create snapshot.yaml and spotworldus-postgres.dump in root folder.
+Run `pnpm backup`.
+
+### Restore
+
+**!!! This comand delete all current project data. Be sure to create new backup if needed !!!**
+
+Place snapshot.yaml and spotworldus-postgres.dump in root folder. Sure prev containers deleted.
+Run `pnpm restore`.

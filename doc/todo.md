@@ -9,4 +9,4 @@
 - ~~процесс регистрации https://docs.directus.io/blog/directus-auth-sveltekit.html#create-the-login-form~~
 - куки для большей безопасности?
 
-- !!!запуш изменения а то проебешь!!!
+- ~~!!!запуш изменения а то проебешь!!!~~

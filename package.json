@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "init": "cp .env.example .env",
     "backup": "pnpm export-directus-snapshot && pnpm export-postgres-backup",
-    "restore": "pnpm restore-directus-snapshot && pnpm restore-postgres-backup",
+    "restore": "pnpm restore-postgres-backup",
     "export-directus-snapshot": "./dev/export-directus-snapshot.sh",
     "restore-directus-snapshot": "./dev/restore-directus-snapshot.sh",
     "export-postgres-backup": "./dev/export-postgres-backup.sh",

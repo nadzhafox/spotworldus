@@ -21,8 +21,8 @@ services:
     ports:
       - 8055:8055
     volumes:
-      - ./volumes/directus/uploads:/directus/uploads
-      # - ./volumes/directus/extensions:/directus/extensions
+      - ./volumes/uploads:/directus/uploads
+      # - ./volumes/extensions:/directus/extensions
     depends_on:
       - cache
       - database
@@ -33,9 +33,9 @@ services:
       DB_CLIENT: ${DB_CLIENT}
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
-      DB_DATABASE: ${DB_DATABASE}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${POSTGRES_DB}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
 
       CACHE_ENABLED: ${CACHE_ENABLED}
       CACHE_STORE: ${CACHE_STORE}
